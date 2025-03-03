@@ -1,31 +1,28 @@
 \documentclass[10pt,a5paper]{book}
+
 \usepackage[bookmarks]{hyperref}
 \usepackage[outer=1.0cm,inner=1.8cm,top=1.8cm,bottom=1.5cm]{geometry}
 \usepackage[portuguese]{babel}
 \usepackage[chorded,onesongcolumn]{songs}
-
-% Configuração do cabeçalho e rodapé com fancyhdr
 \usepackage{fancyhdr}
+
 \fancyhf{}
-\fancyhead[LE,RO]{\sffamily\small Songbook - Real Sigma Music} % Cabeçalho dinâmico
-\fancyfoot[C]{\sffamily\footnotesize Samuel Santana - Rio Real - BA} % Número de página centralizado no rodapé
+\fancyhead[LE,RO]{\sffamily\small Songbook - Real Sigma Music}
+\fancyfoot[C]{\sffamily\footnotesize Samuel Santana - Rio Real - BA}
 \fancyfoot[LE]{\sffamily\thepage}
 \fancyfoot[RO]{\sffamily\thepage}
-\renewcommand{\headrulewidth}{1pt} % Linha horizontal no cabeçalho
-\renewcommand{\footrulewidth}{1pt} % Linha horizontal no rodapé
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
 \pagestyle{fancy}
 
-% Configuração do hyperref (links sem cores e sem bordas)
 \hypersetup{
 	colorlinks=false,
 	pdfborder={0 0 0}
 }
 
-% Personalização dos índices do pacote songs
 \renewcommand{\idxheadfont}{\sffamily\bfseries\LARGE} % Cabeçalho
 \renewcommand{\idxtitlefont}{\sffamily\normalsize} % Título das músicas
 
-% Personalização do layout do songbook
 \setlength{\songnumwidth}{1cm} % Largura da caixa de número da música
 \renewcommand{\stitlefont}{\sffamily\bfseries\LARGE} % Fonte do título da música
 \renewcommand{\extendprelude}{
@@ -36,14 +33,12 @@
 }
 \renewcommand{\makepostlude}{\resettitles} % Limpa títulos ao final da música
 
-% Configuração das fontes e espaçamentos para acordes e letras
 \renewcommand{\printchord}[1]{\sffamily\bfseries\normalsize#1} % Fonte dos acordes
 \renewcommand{\lyricfont}{\sffamily\normalsize} % Fonte da letra da música
 \renewcommand{\clineparams}{\baselineskip=10pt} % Espaço entre acorde e letra
 \renewcommand{\sharpsymbol}{\#} % sustenido
 \renewcommand{\flatsymbol}{b} % bemol
 
-% Outras configurações do pacote songs
 \setlength{\cbarwidth}{1pt}  % Largura da barra vertical (refrão)
 \setlength{\sbarheight}{0pt} % Altura da barra horizontal entre as músicas
 \newindex{index}{index} % Definição do índice para as músicas
