@@ -4,11 +4,12 @@
 \usepackage[outer=1.0cm,inner=1.8cm,top=1.5cm,bottom=1.3cm]{geometry}
 \usepackage[portuguese]{babel}
 \usepackage[colorlinks=true,linkcolor=black]{hyperref}
+\usepackage{graphicx}
 
 \usepackage{fancyhdr}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[RE,LO]{\small SONGBOOK}
+\fancyhead[RE,LO]{\small SONGBOOK -- Legião Urbana}
 \fancyfoot[C]{\footnotesize \copyright ~ \the\year ~ Samuel Santana da Purificação}
 \fancyfoot[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{1pt}
@@ -21,7 +22,7 @@
 \setlength{\songnumwidth}{1cm}
 \renewcommand{\printsongnum}[1]{\bfseries\huge #1}
 \renewcommand{\stitlefont}{\bfseries\LARGE}
-\renewcommand{\extendprelude}{\small\showrefs\showauthors{\songcopyright\par}}
+\renewcommand{\extendprelude}{\small\showrefs\showauthors{\itshape\songcopyright\par}}
 \renewcommand{\printchord}[1]{\bfseries\normalsize#1}
 \renewcommand{\clineparams}{\baselineskip=10pt}
 \renewcommand{\sharpsymbol}{\#}
@@ -31,7 +32,13 @@
 \renewcommand{\makepostlude}{\resettitles}
 \minfrets=5
 
-\title{\bfseries\Huge SONGBOOK \vfill}
+\title{\bfseries\Huge SONGBOOK\\LEGIÃO URBANA\\
+\vfill
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{img.jpg}
+\end{figure}
+\vfill}
 \author{Samuel Santana da Purificação}
 \date{\small\today}
 
@@ -40,21 +47,20 @@
 
 \begin{document}
 
+\newgeometry{margin=1.5cm}
 \maketitle
 \thispagestyle{empty}
-
-\showindex[2]{\rmfamily Índice de músicas}{index}
-\thispagestyle{empty}
+\restoregeometry
+\null
+\showindex[2]{\rmfamily Índice}{index}
 
 \begin{songs}{index}
-
-\include{songs/Será}
-\include{songs/Tempo Perdido}
-\include{songs/Pais E Filhos}
-\include{songs/Vento No Litoral}
-\include{songs/Mais Uma Vez}
-\include{songs/Que País É Este?}
-
+	\include{songs/Será.tex}
+	\include{songs/Tempo Perdido.tex}
+	\include{songs/Pais E Filhos.tex}
+	\include{songs/Vento No Litoral.tex}
+	\include{songs/Mais Uma Vez.tex}
+	\include{songs/Que País É Este.tex}
 \end{songs}
 
 \end{document}
